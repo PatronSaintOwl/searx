@@ -15,8 +15,8 @@ generated and deployed at :docs:`github.io <.>`.  For build prerequisites read
 :ref:`docs build`.
 
 The source files of Searx's documentation are located at :origin:`docs`.  Sphinx
-assumes source files to be encoded in UTF-8 by defaul.  Run :ref:`make docs-live
-<make docs-live>` to build HTML while editing.
+assumes source files to be encoded in UTF-8 by default.  Run :ref:`make docs.live
+<make docs.live>` to build HTML while editing.
 
 .. sidebar:: Further reading
 
@@ -227,13 +227,13 @@ To refer anchors use the `ref role`_ markup:
 
 .. code:: reST
 
-   Visit chapter :ref:`reST anchor`.  Or set hyperlink text manualy :ref:`foo
+   Visit chapter :ref:`reST anchor`.  Or set hyperlink text manually :ref:`foo
    bar <reST anchor>`.
 
 .. admonition:: ``:ref:`` role
    :class: rst-example
 
-   Visist chapter :ref:`reST anchor`.  Or set hyperlink text manualy :ref:`foo
+   Visist chapter :ref:`reST anchor`.  Or set hyperlink text manually :ref:`foo
    bar <reST anchor>`.
 
 .. _reST ordinary ref:
@@ -494,8 +494,8 @@ Figures & Images
    is flexible.  To get best results in the generated output format, install
    ImageMagick_ and Graphviz_.
 
-Searx's sphinx setup includes: :ref:`linuxdoc:kfigure`.  Scaleable here means;
-scaleable in sense of the build process.  Normally in absence of a converter
+Searx's sphinx setup includes: :ref:`linuxdoc:kfigure`.  Scalable here means;
+scalable in sense of the build process.  Normally in absence of a converter
 tool, the build process will break.  From the authors POV it’s annoying to care
 about the build process when handling with images, especially since he has no
 access to the build process.  With :ref:`linuxdoc:kfigure` the build process
@@ -503,7 +503,7 @@ continues and scales output quality in dependence of installed image processors.
 
 If you want to add an image, you should use the ``kernel-figure`` (inheritance
 of :dudir:`figure`) and ``kernel-image`` (inheritance of :dudir:`image`)
-directives.  E.g. to insert a figure with a scaleable image format use SVG
+directives.  E.g. to insert a figure with a scalable image format use SVG
 (:ref:`svg image example`):
 
 .. code:: reST
@@ -1185,7 +1185,7 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
         - cell 4.4
 
       * - row 5
-        - cell 5.1 with automatic span to rigth end
+        - cell 5.1 with automatic span to right end
 
       * - row 6
         - cell 6.1
@@ -1237,7 +1237,7 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
         - cell 4.4
 
       * - row 5
-        - cell 5.1 with automatic span to rigth end
+        - cell 5.1 with automatic span to right end
 
       * - row 6
         - cell 6.1
@@ -1276,13 +1276,12 @@ Templating
 
 .. sidebar:: Build environment
 
-   All *generic-doc* tasks are running in the :ref:`build environment <make
-   pyenv>`.
+   All *generic-doc* tasks are running in the :ref:`make install`.
 
 Templating is suitable for documentation which is created generic at the build
-time.  The sphinx-jinja_ extension evaluates jinja_ templates in the :ref:`build
-environment <make pyenv>` (with searx modules installed).  We use this e.g. to
-build chapter: :ref:`engines generic`.  Below the jinja directive from the
+time.  The sphinx-jinja_ extension evaluates jinja_ templates in the :ref:`make
+install` (with searx modules installed).  We use this e.g. to build chapter:
+:ref:`engines generic`.  Below the jinja directive from the
 :origin:`docs/admin/engines.rst` is shown:
 
 .. literalinclude:: ../admin/engines.rst
